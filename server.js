@@ -65,13 +65,13 @@ function createConcatString(alphabetChars) {
     // Reverse the array
     const reversed = alphabetChars.reverse();
     
-    // Apply alternating caps
+    // Apply alternating caps - start with uppercase (index 0 = uppercase, index 1 = lowercase)
     let result = "";
     for (let i = 0; i < reversed.length; i++) {
         if (i % 2 === 0) {
-            result += reversed[i].toLowerCase();
-        } else {
             result += reversed[i].toUpperCase();
+        } else {
+            result += reversed[i].toLowerCase();
         }
     }
     
